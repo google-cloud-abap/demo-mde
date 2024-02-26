@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>PM Orders</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGOOG_PMTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGOOG_PM</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZGOOG_PUBLISH_PM_ORDER_STATUS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Publish PM Order Status</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>EVENT</PARAMETER>
+       <DBFIELD>SWETYPECOU-EVENT</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>RECTYPE</PARAMETER>
+       <DBFIELD>SWETYPECOU-RECTYPE</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OBJTYPE</PARAMETER>
+       <DBFIELD>SWETYPECOU-OBJTYPE</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OBJKEY</PARAMETER>
+       <DBFIELD>SWEINSTCOU-OBJKEY</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>EXCEPTIONS_ALLOWED</PARAMETER>
+       <DBFIELD>SWEFLAGS-EXC_OK</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>REC_ID</PARAMETER>
+       <DBFIELD>SWELOG-RECID</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>EVENT_CONTAINER</PARAMETER>
+       <DBSTRUCT>SWCONT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>TEMP_ERROR</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>ANY_ERROR</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>EVENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Event</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name of Receiver Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OBJKEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Object key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXCEPTIONS_ALLOWED</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Checkbox</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>REC_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Receiver ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EVENT_CONTAINER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Instance Structure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TEMP_ERROR</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Temporary Error</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ANY_ERROR</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
